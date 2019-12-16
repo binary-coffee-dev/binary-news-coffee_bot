@@ -12,12 +12,12 @@ newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
     """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi!')
+    update.message.reply_text('Hello type some keywords to start searching for news on the web.')
 
 
 def help(update, context):
     """Send a message when the command /help is issued."""
-    update.message.reply_text('Help!')
+    update.message.reply_text('Hello type some keywords to start searching for news on the web.')
 
 
 def echo(update, context):
@@ -34,7 +34,7 @@ def echo(update, context):
         update.message.reply_text("%s\n\n%s" % (i['source']['name'], i['url']))
     
     if len(all_articles['articles']) == 0:
-        update.message.reply_text("No se ha encontrado ninguna noticia relacionada. Trate de simplificar lo que desea con palabras clave.")
+        update.message.reply_text("No related news has been found. Try to simplify what you want with keywords.")
 
 
 def main():
