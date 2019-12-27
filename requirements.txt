@@ -1,2 +1,2 @@
-python-telegram-bot
-newsapi-python
+python-telegram-bot==12.2.0
+newsapi-python==0.2.6
